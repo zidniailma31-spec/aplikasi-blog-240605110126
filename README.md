@@ -1,3 +1,205 @@
+
+# Website Blog Artikel Laravel
+
+## Identitas Mahasiswa
+
+- Nama : Zidnia Ilma Arifa
+- NIM : 240605110126
+
+---
+
+## Deskripsi Aplikasi
+
+Website Blog Artikel merupakan aplikasi berbasis` web yang dibangun menggunakan framework Laravel dan database MySQL. Aplikasi ini digunakan untuk mengelola artikel dan kategori artikel sehingga memudahkan admin dalam mengatur konten yang ditampilkan kepada pengguna.
+
+Aplikasi memiliki beberapa fitur utama, yaitu:
+
+- Menampilkan daftar artikel
+- Menampilkan detail artikel
+- Menampilkan artikel berdasarkan kategori
+- Menambah artikel baru
+- Mengedit artikel
+- Menghapus artikel
+- Mengelola kategori artikel
+- Relasi antara artikel dan kategori
+- Halaman frontend untuk pengunjung
+- Dashboard admin untuk pengelolaan data
+
+Teknologi yang digunakan:
+
+- Laravel 12
+- PHP 8.x
+- MySQL
+- Bootstrap
+- Blade Template Engine
+
+---
+
+## Struktur Database
+
+### Tabel kategori_artikel
+
+| Field | Tipe Data |
+|---------|---------|
+| id | bigint |
+| nama_kategori | varchar |
+| created_at | timestamp |
+| updated_at | timestamp |
+
+### Tabel artikel
+
+| Field | Tipe Data |
+|---------|---------|
+| id | bigint |
+| judul | varchar |
+| isi | text |
+| kategori_id | bigint |
+| gambar | varchar |
+| created_at | timestamp |
+| updated_at | timestamp |
+
+### Relasi Database
+
+- Satu kategori dapat memiliki banyak artikel (One To Many)
+- Satu artikel hanya memiliki satu kategori
+
+---
+
+## Cara Menjalankan Aplikasi Secara Lokal
+
+### 1. Clone Repository
+
+```bash
+
+```
+
+### 2. Masuk ke Folder Project
+
+```bash
+cd nama-repository
+```
+
+### 3. Install Dependency Laravel
+
+```bash
+composer install
+```
+
+### 4. Salin File Environment
+
+```bash
+cp .env.example .env
+```
+
+Untuk Windows:
+
+```bash
+copy .env.example .env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Konfigurasi Database
+
+Buka file `.env`, kemudian sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_blog
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7. Jalankan Migration
+
+```bash
+php artisan migrate
+```
+
+### 8. Jalankan Seeder (Jika Ada)
+
+```bash
+php artisan db:seed
+```
+
+### 9. Menjalankan Server Laravel
+
+```bash
+php artisan serve
+```
+
+Aplikasi dapat diakses melalui:
+
+```text
+http://127.0.0.1:8000 : Pengunjung
+http://localhost:8000/dashboard : sistem
+```
+
+---
+
+## Fitur Aplikasi
+
+### Manajemen Artikel
+
+- Tambah artikel
+- Edit artikel
+- Hapus artikel
+- Lihat detail artikel
+
+### Manajemen Kategori
+
+- Tambah kategori
+- Edit kategori
+- Hapus kategori
+
+### Frontend Pengguna
+
+- Halaman Home
+- Daftar Artikel
+- Detail Artikel
+- Artikel Berdasarkan Kategori
+
+---
+
+## Screenshot Aplikasi
+
+### Halaman Home
+
+(Tambahkan screenshot halaman home)
+
+### Halaman Artikel
+
+(Tambahkan screenshot halaman artikel)
+
+### Halaman Detail Artikel
+
+(Tambahkan screenshot halaman detail artikel)
+
+### Halaman Kategori Artikel
+
+(Tambahkan screenshot halaman kategori)
+
+---
+
+## Video Demonstrasi
+
+Link YouTube:
+
+
+---
+
+## Author
+
+Zidnia Ilma Arifa
+
+240605110126
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +266,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
